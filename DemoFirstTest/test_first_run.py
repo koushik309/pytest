@@ -12,3 +12,4 @@ def test2_lambdatest_playground():
     driver.maximize_window()
     driver.get("https://ecommerce-playground.lambdatest.io/")
     print("Title:",driver.title)
+    
