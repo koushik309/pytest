@@ -22,8 +22,8 @@ class AssertionsTest(softest.TestCase):
 
         # Print all paragraph elements for debugging
         elements = driver.find_elements(By.TAG_NAME, "p")
-        for index, element in enumerate(elements):
-            print(f"Found text at index {index}: {element.text}")
+        #for index, element in enumerate(elements):
+        #    print(f"Found text at index {index}: {element.text}")
 
         # Wait for the result text to be present
         wait = WebDriverWait(driver, 30)
@@ -34,8 +34,8 @@ class AssertionsTest(softest.TestCase):
         age_text = driver.find_element(By.XPATH, "//p[contains(., 'Age :')]").text
 
         # Print extracted values
-        print("Extracted Gender Text:", gender_text)
-        print("Extracted Age Text:", age_text)
+        #print("Extracted Gender Text:", gender_text)
+        #print("Extracted Age Text:", age_text)
 
         # Soft Assertions
         self.soft_assert(self.assertIn, "Gender : Male", gender_text, f"Expected 'Gender : Male', but got '{gender_text}'")

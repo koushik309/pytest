@@ -13,3 +13,10 @@ def test2_lambdatest_playground():
     driver.get("https://ecommerce-playground.lambdatest.io/")
     print("Title:",driver.title)
     
+def testRexWebsite():
+    driver = webdriver.Chrome()
+    driver.maximize_window()
+    driver.get("https://www.rexjones2.com/")
+    print("Title:",driver.title)
+    
+    

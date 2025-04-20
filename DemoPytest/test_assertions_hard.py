@@ -11,16 +11,16 @@ def test_lambdatest_radio_button_demo_values():
     driver.find_element(By.XPATH, "//input[@value='0 - 5' and @name='ageGroup']").click()
     driver.find_element(By.XPATH, "//button[text()='Get values']").click()
     elements = driver.find_elements(By.TAG_NAME, "p")
-    for index, element in enumerate(elements):
-        print(f"Found text at index {index}: {element.text}")
+   # for index, element in enumerate(elements):
+   #     print(f"Found text at index {index}: {element.text}")
 
     wait = WebDriverWait(driver, 30)
     wait.until(EC.presence_of_element_located((By.XPATH, "//p[contains(., 'Gender :')]")))
 
     gender_text = driver.find_element(By.XPATH, "//p[contains(., 'Gender :')]").text
     age_text = driver.find_element(By.XPATH, "//p[contains(., 'Age :')]").text
-    print("Extracted Gender Text:", gender_text)
-    print("Extracted Age Text:", age_text)
+    #print("Extracted Gender Text:", gender_text)
+    #print("Extracted Age Text:", age_text)
 
     # Validate output correctly
     assert "Gender : Male" in gender_text, f"Expected 'Gender : Male', but got '{gender_text}'"
